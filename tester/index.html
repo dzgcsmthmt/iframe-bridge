@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<iframe id="iframe" src="iframe.html"></iframe>
+<iframe id="iframe2" src="iframe2.html"></iframe>
+
+<div id="messages"></div>
+
+<script src="../dist/host_bridge.js"></script>
+
+<script>
+	var iFrame = document.getElementById('iframe');
+	var iFrame2 = document.getElementById('iframe2');
+	var messages = document.getElementById('messages');
+
+	var bridge = new IFrameBridge();
+
+	bridge.connect([
+		{name: 'ZS',targetWindow:iFrame.contentWindow},
+		{name: 'LS',targetWindow:iFrame2.contentWindow}
+	]);
+	// bridge.connect('ZS',iFrame.contentWindow);
+	// bridge.connect('LS',iFrame2.contentWindow);
+
+	bridge.on(['ZS'],'ping',function(data){
+		console.log('top receive msg',data);
+	});
+
+	bridge.on('pong',function(data){
+		console.log('top receive msg',data);
+	});
+
+	bridge.postMessage('ping',1);
+	bridge.postMessage('ZS:aa',1);
+
+	
+</script>
+</body>
+</html>
