@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iframe Bridge</title>
+    <style>
+        #container{
+            border: 4px solid #000;
+            width: 600px;
+            min-height: 300px;
+        }
+        iframe{
+            width: 625px;
+            height: 325px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+    <iframe src="./iframe.html" id="iframe" frameborder="0"></iframe>
+    <iframe src="./iframe2.html" id="iframe2" frameborder="0"></iframe>
+    <script src="dist/main.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
