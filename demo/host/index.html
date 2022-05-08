@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iframe Bridge</title>
+    <style>
+        #container{
+            border: 4px solid #000;
+            width: 600px;
+            min-height: 300px;
+        }
+        iframe{
+            width: 625px;
+            height: 325px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+    <button id="disconnect">销毁iframe</button>
+    <button id="destroy">销毁bridge</button>
+    <button id="load">加载iframe</button>
+    <iframe src="./iframe.html" id="iframe" frameborder="0"></iframe>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>

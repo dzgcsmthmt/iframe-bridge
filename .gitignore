@@ -1,54 +1,40 @@
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
-# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-
-# User-specific stuff:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
-
-# Sensitive or high-churn files:
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.xml
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-
-# Gradle:
-.idea/**/gradle.xml
-.idea/**/libraries
-
-# CMake
-cmake-build-debug/
-
-# Mongo Explorer plugin:
-.idea/**/mongoSettings.xml
-
-## File-based project format:
+.gradle
+/node_modules
+!gradle/wrapper/gradle-wrapper.jar
+doc.lnk
+/question-show
+yarn.lock
+package-lock.json
+resource-map.js
+.history
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.history
+### IntelliJ IDEA ###
+.idea
 *.iws
+*.iml
+*.ipr
 
-## Plugin-specific files:
+### NetBeans ###
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
 
-# IntelliJ
-out/
 
-# mpeltonen/sbt-idea plugin
-.idea_modules/
+### vscode ###
+/.vscode
 
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Cursive Clojure plugin
-.idea/replstate.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
-
-########################################################################################################################
-
-node_modules
-npm-debug.log
+### clean 无用/test/api/**.json
+/clean.js
+/output
+.DS_Store
+jsconfig.json
+components/common/bridge/bridge-debug.js
+/components/common/bridge/debug-bridge.js
